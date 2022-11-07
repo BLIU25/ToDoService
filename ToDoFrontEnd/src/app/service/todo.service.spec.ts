@@ -59,4 +59,13 @@ describe('TodoService', () => {
     // then
     expect(httpClientSpy.delete).toHaveBeenCalledWith('https://localhost:5001/ToDos/9');
   });
+
+  it('should get todoitem detail when via mockhttp get', () => {
+    // given
+    // const todoItem = new ToDoItem(9, 'hello', 'description', true);
+    // when
+    service.findById(9);
+    // then
+    expect(httpClientSpy.get).toHaveBeenCalledWith('https://localhost:5001/ToDos/9');
+  });
 });
