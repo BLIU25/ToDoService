@@ -33,8 +33,8 @@ export class TodoService {
     });
   }
 
-  public update(updateTodoItem: ToDoItem): void {
-    this.todoStore.update(updateTodoItem);
+  public update(id: number, updateTodoItem: ToDoItem): void {
+    this.todoApi.update(id, updateTodoItem);
   }
 
   public delete(id: number): void {
