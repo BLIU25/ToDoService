@@ -15,8 +15,8 @@ export class TodoService {
   constructor(private todoStore: TodoStoreService, private todoApi: TodoApiService) {
   }
 
-  public get todoItems(): Array<ToDoItem> {
-    return this.todoStore.getAll();
+  public getAll(): Observable<Array<ToDoItem>> {
+    return this.todoApi.getAll();
   }
 
   public findById(id: number): Observable<ToDoItem> {

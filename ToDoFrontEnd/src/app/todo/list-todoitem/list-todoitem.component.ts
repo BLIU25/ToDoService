@@ -10,9 +10,7 @@ import { TodoService } from '../../service/todo.service';
 })
 export class ListTodoitemComponent implements OnInit {
 
-  public get toDoItems(): ToDoItem[] {
-    return this.todoService.todoItems;
-  }
+  public toDoItems: ToDoItem[] = [];
 
   constructor(private todoService: TodoService,
     private router: Router) {
