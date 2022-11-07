@@ -33,5 +33,6 @@ export class ListTodoitemComponent implements OnInit {
 
   public doDelete(id: number): void {
     this.todoService.delete(id);
+    this.router.navigate(['todos', id]);
   }
 }

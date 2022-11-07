@@ -16,7 +16,7 @@ export class TodoApiService {
     return this.http.get<ToDoItem[]>(`${apiUrl}`);
   }
 
-  public getById(id: string): Observable<ToDoItem> {
+  public getById(id: number): Observable<ToDoItem> {
     return this.http.get<ToDoItem>(`${apiUrl}/${id}`);
   }
 
@@ -24,11 +24,11 @@ export class TodoApiService {
     return this.http.post<void>(`${apiUrl}`, todo);
   }
 
-  public delete(id: string): Observable<void> {
+  public delete(id: number): Observable<void> {
     return this.http.delete<void>(`${apiUrl}/${id}`);
   }
 
-  public update(id: string, todo: ToDoItem): Observable<ToDoItem> {
+  public update(id: number, todo: ToDoItem): Observable<ToDoItem> {
     return this.http.put<ToDoItem>(`${apiUrl}/${id}`, todo);
   }
 }
